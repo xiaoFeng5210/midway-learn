@@ -6,11 +6,14 @@ import { join } from 'path';
 // import { DefaultErrorFilter } from './filter/default.filter';
 // import { NotFoundFilter } from './filter/notfound.filter';
 import { ReportMiddleware } from './middleware/report.middleware';
+import * as view from '@midwayjs/view-nunjucks';
+
 
 @Configuration({
   imports: [
     koa,
     validate,
+    view,
     {
       component: info,
       enabledEnvironment: ['local'],
